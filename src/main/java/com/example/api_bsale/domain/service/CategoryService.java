@@ -7,3 +7,4 @@ import org.springframework.data.domain.Pageable;
 public interface CategoryService {
     Page<Category> getAllCategories(Pageable pageable);
 }
+
