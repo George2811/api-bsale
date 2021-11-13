@@ -3,7 +3,7 @@
 La Api replica una tienda online la cual cuenta con productos agrupados por categorías.
 Mediante el uso de esta Api REST podemos filtar productos por categorías, por nombre, o devolver todos los registros existentes.
 
-### Ficha Técniac
+## Ficha Técnica
 Para el desarrollo de esta Api se hizo uso del lenguaje Java, más precisamente del framework Spring Boot.
 Se implementó bajo el enfoque de **Domain Driven Desgin** (DDD), el cual hace énfasis y trabaja alrededor del modelo de negocio. Ello nos permite segmentar el código en capas, la capa **modelo**, la cual contiene todas las clases que reflejan el negocio y, a su vez, encontramos como tablas en la base de datos.
 La capa **servicio** nos permitirá implementar la lógica de las funciones que realizará nuestra aplicación. Y finalmente, la capa **controlador**, quién nos permite acceder a esas funcionalidades descritas en ***servicio***, lo que hace que sea la capa más expuesta y cercana al usuario.
