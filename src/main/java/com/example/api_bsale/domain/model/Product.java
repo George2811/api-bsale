@@ -1,5 +1,7 @@
 package com.example.api_bsale.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -15,7 +17,8 @@ public class Product implements Serializable {
     private int discount;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "category", nullable = false)
+    @JoinColumn(name = "category", nullable = false, referencedColumnName = "id")
+    @JsonIgnore
     private Category category;
 
 

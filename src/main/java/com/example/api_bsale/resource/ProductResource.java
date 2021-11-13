@@ -1,5 +1,7 @@
 package com.example.api_bsale.resource;
 
+import com.example.api_bsale.domain.model.Category;
+
 public class ProductResource {
     private Long id;
     private String name;
@@ -48,10 +50,10 @@ public class ProductResource {
         return this;
     }
 
-    public Long getCategory() {
+    public Long getCategoryId() {
         return category;
     }
-    public ProductResource setCategory(Long category) {
+    public ProductResource setCategoryId(Long category) {
         this.category = category;
         return this;
     }
