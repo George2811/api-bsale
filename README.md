@@ -13,7 +13,6 @@ Así como también, la dependencia de ModelMapper, este nos permite crear copias
 Finalmente, se podrá observar en el código que se mantuvieron las convenciones del lenguaje usado, así como también se priorizaron las buenas prácticas de desarrollo.
 
 ## Endponits
-****
 ### Product
 * **GET All**: Retorna todos los registros de la tabla 'Product'.
 * **GET ByCategory**: Retorna todos los productos de la categoría indicada. 
@@ -23,7 +22,6 @@ Finalmente, se podrá observar en el código que se mantuvieron las convenciones
 * **GET All**: Retorna todos los registros de la tabla 'Category'.
 
 ## Documentación
-***
 Mediante el link podrá acceder a la documentación de la Api elaborado con Swagger, y la app fue desplegada en Heroku.
 * link: https://online-store-bsale-api.herokuapp.com/swagger-ui/index.html?configUrl=/bsale-api-docs/swagger-config#/
 
