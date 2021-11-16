@@ -16,7 +16,7 @@ Finalmente, se podrá observar en el código que se mantuvieron las convenciones
 ### Product
 * **GET All**: Retorna todos los registros de la tabla 'Product'.
 * **GET ByCategory**: Retorna todos los productos de la categoría indicada. 
-* **GET ByName**: Retorna un producto según el nombre ingresado.
+* **GET ByName**: Retorna todos los productos que coincidan con el nombre ingresado.
 
 ### Category
 * **GET All**: Retorna todos los registros de la tabla 'Category'.
