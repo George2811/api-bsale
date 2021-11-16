@@ -55,14 +55,18 @@ public class ProductsController {
         return new PageImpl<>(resources, pageable, resources.size());
     }
 
-    @Operation(summary = "Producto por su nombre", description = "Buscador de producto según su nombre", tags = {"Producto"})
+    @Operation(summary = "Producto(s) por su nombre", description = "Buscador de producto según su nombre", tags = {"Producto"})
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Productos retornado", content =
+            @ApiResponse(responseCode = "200", description = "Productos retornados", content =
             @Content(mediaType = "application/json"))
     })
     @GetMapping("/products/name/{name}")
-    public ProductResource getProductByName(@PathVariable String name){
-        return convertToResource(productService.getProductByName(name));
+    public Page<ProductResource> getProductByName(@PathVariable String name, Pageable pageable){
+        Page<Product> productsPage = productService.getProductsByName(name, pageable);
+        List<ProductResource> resources = productsPage.getContent().
+                stream().map(this::convertToResource)
+                .collect(Collectors.toList());
+        return new PageImpl<>(resources, pageable, resources.size());
     }
 
     private ProductResource convertToResource(Product product){

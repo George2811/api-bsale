@@ -33,7 +33,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Product getProductByName(String name) {
-        return productRepository.findByName(name).orElseThrow(() -> new ResourceNotFoundException("Producto no encontrado con el nombre "+ name));
+    public Page<Product> getProductsByName(String name, Pageable pageable) {
+        return productRepository.findByNameContaining(name, pageable);
     }
 }
